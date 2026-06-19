@@ -1,11 +1,315 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>我的个人主页</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人简历</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Microsoft YaHei", sans-serif;
+}
+body {
+background-color: #f3f4f6;
+padding: 40px 20px;
+}
+.resume-wrap {
+max-width: 1100px;
+margin: 0 auto;
+display: flex;
+background: #fff;
+box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+border-radius: 12px;
+overflow: hidden;
+}
+/* 左侧侧边栏 */
+.resume-left {
+width: 300px;
+background: linear-gradient(145deg, #254b9c, #1a3470);
+color: #fff;
+padding: 40px 25px;
+}
+.avatar-box {
+text-align: center;
+margin-bottom: 30px;
+}
+.avatar {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+border: 4px solid rgba(255,255,255,0.3);
+object-fit: cover;
+background: #eee;
+display: inline-block;
+line-height: 130px;
+color: #254b9c;
+font-size: 32px;
+}
+.name {
+font-size: 26px;
+margin-top: 16px;
+font-weight: 600;
+}
+.job-title {
+font-size: 14px;
+opacity: 0.85;
+margin-top: 6px;
+letter-spacing: 1px;
+}
+.left-title {
+font-size: 16px;
+padding-bottom: 10px;
+margin: 35px 0 15px;
+border-bottom: 1px solid rgba(255,255,255,0.25);
+letter-spacing: 1px;
+}
+.contact-item {
+display: flex;
+align-items: center;
+margin-bottom: 14px;
+font-size: 14px;
+opacity: 0.92;
+}
+.contact-item i {
+width: 24px;
+margin-right: 10px;
+}
+.skill-item {
+margin-bottom: 16px;
+}
+.skill-name {
+font-size: 14px;
+margin-bottom: 6px;
+display: flex;
+justify-content: space-between;
+}
+.skill-bar-bg {
+width: 100%;
+height: 6px;
+background: rgba(255,255,255,0.2);
+border-radius: 3px;
+overflow: hidden;
+}
+.skill-bar {
+height: 100%;
+background: #fff;
+border-radius: 3px;
+}
+.self-desc {
+font-size: 14px;
+line-height: 1.7;
+opacity: 0.9;
+}
+    /* 右侧主体内容 */
+    .resume-right {
+        flex: 1;
+        padding: 40px 35px;
+        color: #222;
+    }
+    .section-title {
+        font-size: 20px;
+        color: #254b9c;
+        padding-bottom: 10px;
+        margin-bottom: 22px;
+        border-bottom: 2px solid #e6edf7;
+        display: flex;
+        align-items: center;
+    }
+    .section-title span {
+        display: inline-block;
+        width: 4px;
+        height: 20px;
+        background: #254b9c;
+        margin-right: 10px;
+    }
+    .timeline-item {
+        margin-bottom: 28px;
+        position: relative;
+        padding-left: 20px;
+    }
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #254b9c;
+    }
+    .timeline-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    .timeline-post {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .timeline-time {
+        font-size: 14px;
+        color: #666;
+    }
+    .timeline-company {
+        font-size: 15px;
+        color: #444;
+        margin-bottom: 10px;
+    }
+    .timeline-text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #555;
+    }
+    .edu-list {
+        line-height: 1.8;
+        font-size: 14px;
+        color: #555;
+    }
+    .edu-list p {
+        margin-bottom: 8px;
+    }
+
+    /* 移动端适配 */
+    @media screen and (max-width: 768px) {
+        .resume-wrap {
+            flex-direction: column;
+        }
+        .resume-left {
+            width: 100%;
+        }
+        body {
+            padding: 10px;
+        }
+    }
+</style>
+
 </head>
 <body>
-    <h1>欢迎来到程伟的个人网站</h1>
-    <p>正在建设中</p>
+<div class="resume-wrap">
+<!-- 左侧侧边栏 -->
+<div class="resume-left">
+<div class="avatar-box">
+<div class="avatar">头像</div>
+<div class="name">张三</div>
+<div class="job-title">前端开发工程师 / 全栈开发</div>
+</div>
+    <div class="left-title">联系方式</div>
+    <div class="contact-item">
+        <i>☎</i>
+        <span>138-0000-0000</span>
+    </div>
+    <div class="contact-item">
+        <i>✉</i>
+        <span>zhangsan@email.com</span>
+    </div>
+    <div class="contact-item">
+        <i>📍</i>
+        <span>广东省广州市</span>
+    </div>
+    <div class="contact-item">
+        <i>🔗</i>
+        <span>github.com/zhangsan</span>
+    </div>
+
+    <div class="left-title">专业技能</div>
+    <div class="skill-item">
+        <div class="skill-name">HTML/CSS/JS <span>95%</span></div>
+        <div class="skill-bar-bg">
+            <div class="skill-bar" style="width:95%"></div>
+        </div>
+    </div>
+    <div class="skill-item">
+        <div class="skill-name">Vue / React <span>90%</span></div>
+        <div class="skill-bar-bg">
+            <div class="skill-bar" style="width:90%"></div>
+        </div>
+    </div>
+    <div class="skill-item">
+        <div class="skill-name">Node.js <span>82%</span></div>
+        <div class="skill-bar-bg">
+            <div class="skill-bar" style="width:82%"></div>
+        </div>
+    </div>
+    <div class="skill-item">
+        <div class="skill-name">MySQL / Redis <span>78%</span></div>
+        <div class="skill-bar-bg">
+            <div class="skill-bar" style="width:78%"></div>
+        </div>
+    </div>
+
+    <div class="left-title">自我评价</div>
+    <p class="self-desc">
+        3年前端开发经验，熟悉前后端协同开发流程，擅长企业级管理系统、H5页面开发；注重代码规范与性能优化，具备良好沟通能力与项目落地经验。
+    </p>
+</div>
+
+<!-- 右侧主体内容 -->
+<div class="resume-right">
+    <div class="section-title">
+        <span></span>工作经历
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-head">
+            <div class="timeline-post">前端开发工程师</div>
+            <div class="timeline-time">2023.03 - 至今</div>
+        </div>
+        <div class="timeline-company">XX科技有限公司 | 研发部</div>
+        <div class="timeline-text">
+            1、负责公司后台管理系统迭代开发，使用Vue3+Element Plus搭建页面，封装通用组件20+个；<br>
+            2、对接后端接口，完成数据可视化大屏模块，优化页面加载速度提升40%；<br>
+            3、参与移动端H5活动页开发，适配多端兼容，保障线上活动稳定运行。
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-head">
+            <div class="timeline-post">初级前端开发</div>
+            <div class="timeline-time">2021.07 - 2023.02</div>
+        </div>
+        <div class="timeline-company">XX网络有限公司</div>
+        <div class="timeline-text">
+            1、根据UI设计稿完成页面还原，编写响应式布局；<br>
+            2、协助维护官网、小程序前端页面，修复线上兼容性bug；<br>
+            3、编写开发文档，统一团队CSS、JS编码规范。
+        </div>
+    </div>
+
+    <div class="section-title">
+        <span></span>项目经验
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-head">
+            <div class="timeline-post">企业数据可视化平台</div>
+            <div class="timeline-time">2024.01 - 2024.06</div>
+        </div>
+        <div class="timeline-text">
+            独立负责前端模块，使用ECharts实现折线、柱状、地图图表；实现权限路由控制、大屏自适应缩放；页面首屏加载从3.2s优化至1.1s。
+        </div>
+    </div>
+
+    <div class="section-title">
+        <span></span>教育背景
+    </div>
+    <div class="edu-list">
+        <p><strong>XX理工大学</strong> | 计算机科学与技术 | 本科 | 2017.09 - 2021.06</p>
+        <p>主修课程：数据结构、计算机网络、Web开发、数据库原理</p>
+        <p>在校荣誉：校级三等奖学金、计算机设计大赛二等奖</p>
+    </div>
+
+    <div class="section-title">
+        <span></span>证书荣誉
+    </div>
+    <div class="edu-list">
+        <p>1、计算机二级证书</p>
+        <p>2、前端工程师职业技能认证</p>
+        <p>3、2024年度公司优秀员工</p>
+    </div>
+</div>
+
+</div>
 </body>
 </html>
